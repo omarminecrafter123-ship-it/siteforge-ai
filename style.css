@@ -178,6 +178,39 @@ img { max-width: 100%; height: auto; }
   opacity: 0.75;
 }
 
+/* ===== Logos ===== */
+.logos {
+  background: #fff;
+  padding: 40px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.logos__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.logos__text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.logos__grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  opacity: 0.5;
+}
+.logo-item {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #1e293b;
+}
+
 /* ===== Sections ===== */
 .section { padding: 96px 0; }
 .section--dark { background: #1a1a2e; color: #fff; }
@@ -482,6 +515,60 @@ img { max-width: 100%; height: auto; }
   margin-top: 12px;
 }
 
+/* ===== Testimonials ===== */
+.section--light { background: #fff; }
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.testimonial {
+  background: #f8f9fc;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+.testimonial__text {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #475569;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+.testimonial__author {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 16px;
+}
+.testimonial__name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+}
+.testimonial__title {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* ===== FAQ ===== */
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.faq-item__question {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a2e;
+}
+.faq-item__answer {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
 /* ===== Footer ===== */
 .footer {
   background: #0f0f23;
@@ -542,6 +629,8 @@ img { max-width: 100%; height: auto; }
   .pricing-card--popular { transform: none; }
   .pricing-card--popular:hover { transform: translateY(-4px); }
   .why-grid { grid-template-columns: 1fr 1fr; }
+  .testimonials { grid-template-columns: 1fr 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
   .addons__grid { grid-template-columns: 1fr 1fr; }
   .footer__inner { grid-template-columns: 1fr; gap: 24px; }
 }
@@ -549,6 +638,7 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 480px) {
   .steps { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
+  .testimonials { grid-template-columns: 1fr; }
   .addons__grid { grid-template-columns: 1fr; }
   .hero__cta { flex-direction: column; }
   .hero__cta .btn { width: 100%; justify-content: center; }
